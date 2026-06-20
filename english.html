@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bethlehem Taxi Gothenburg</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+background:black;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:3px solid #FFD700;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#FFD700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
+}
+
+.hero-content h1{
+font-size:60px;
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+background:#FFD700;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+margin:10px;
+border:none;
+cursor:pointer;
+font-size:16px;
+}
+
+section{
+padding:80px 8%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#FFD700;
+font-size:36px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e1e1e;
+padding:25px;
+border-radius:10px;
+}
+
+.card h3{
+color:#FFD700;
+margin-bottom:10px;
+}
+
+.contact{
+text-align:center;
+background:black;
+}
+
+footer{
+background:#000;
+text-align:center;
+padding:20px;
+border-top:2px solid #FFD700;
+}
+
+@media(max-width:768px){
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.hero-content h1{
+font-size:40px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🚕 Bethlehem Taxi</div>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+<a href="index.html">🇸🇪 Swedish</a>
+<a href="english.html">🇬🇧 English</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+
+<h1>Bethlehem Taxi Gothenburg</h1>
+
+<p>Fast, safe and reliable taxi service available 24/7.</p>
+
+<a class="btn" href="tel:0760318143">📞 Call Now</a>
+
+<button class="btn" onclick="toggleBooking()">🚕 Book Ride</button>
+
+<div id="booking-options" style="display:none; margin-top:20px;">
+<a class="btn" href="https://wa.me/46760318143?text=Hello,%20I%20would%20like%20to%20book%20a%20taxi">💬 WhatsApp</a>
+
+<a class="btn" href="sms:0760318143?body=Hello,%20I%20would%20like%20to%20book%20a%20taxi">📱 SMS</a>
+
+<a class="btn" href="mailto:ibrahim.k.habet86@gmail.com?subject=Taxi Booking">📧 Email</a>
+</div>
+
+</div>
+</section>
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>✈️ Airport Transfer</h3>
+<p>Taxi to and from Gothenburg Landvetter Airport.</p>
+</div>
+
+<div class="card">
+<h3>🏢 Business Travel</h3>
+<p>Comfortable and reliable transportation for companies.</p>
+</div>
+
+<div class="card">
+<h3>🚕 Private Rides</h3>
+<p>Travel safely within Gothenburg and nearby areas.</p>
+</div>
+
+<div class="card">
+<h3>🛣️ Long Distance Trips</h3>
+<p>Comfortable journeys throughout Sweden.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>Why Choose Us?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>✅ Available 24/7</h3>
+<p>We are available whenever you need a ride.</p>
+</div>
+
+<div class="card">
+<h3>✅ Always On Time</h3>
+<p>Punctual service with professional drivers.</p>
+</div>
+
+<div class="card">
+<h3>✅ Safe Travel</h3>
+<p>Reliable and comfortable transportation.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 Phone: +46 76 031 81 43</p>
+
+<p>📧 Email: ibrahim.k.habet86@gmail.com</p>
+
+<p>📍 Gothenburg, Sweden</p>
+
+<br>
+
+<a class="btn" href="tel:0760318143">Call and Book</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Bethlehem Taxi Gothenburg</p>
+
+</footer>
+
+<script>
+function toggleBooking() {
+  var x = document.getElementById("booking-options");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
