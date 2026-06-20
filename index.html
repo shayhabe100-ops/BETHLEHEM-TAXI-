@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="yeBoWaqAuqQgVWlptV0iSi7s3gVzmOtZqvDHEi23xvg" />
-
 <title>Bethlehem Taxi Göteborg</title>
 
 <style>
@@ -27,6 +26,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 border-bottom:3px solid #FFD700;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
@@ -35,10 +37,15 @@ font-weight:bold;
 color:#FFD700;
 }
 
+nav{
+display:flex;
+align-items:center;
+gap:20px;
+}
+
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
 font-weight:bold;
 }
 
@@ -49,28 +56,37 @@ font-weight:bold;
 border:none;
 padding:8px 12px;
 border-radius:6px;
-margin-left:20px;
 cursor:pointer;
 }
 
 .hero{
 min-height:90vh;
 display:flex;
-justify-content:center;
+justify-content:flex-start;
 align-items:center;
-text-align:center;
-padding:40px 20px;
-background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
+text-align:left;
+padding:80px 8%;
+background:
+linear-gradient(90deg,rgba(0,0,0,.92) 0%,rgba(0,0,0,.70) 35%,rgba(0,0,0,.35) 70%),
+url("images/taxi.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.hero-content{
+max-width:650px;
 }
 
 .hero-content h1{
-font-size:60px;
+font-size:72px;
+line-height:1.1;
 color:#FFD700;
 margin-bottom:20px;
 }
 
 .hero-content p{
-font-size:22px;
+font-size:24px;
 margin-bottom:30px;
 }
 
@@ -82,15 +98,21 @@ color:black;
 text-decoration:none;
 font-weight:bold;
 border-radius:8px;
-margin:10px;
+margin:10px 10px 10px 0;
 border:none;
 cursor:pointer;
 font-size:16px;
 }
 
+.btn-dark{
+background:rgba(0,0,0,.7);
+color:white;
+border:1px solid #FFD700;
+}
+
 .booking-form{
 max-width:500px;
-margin:30px auto 0;
+margin:25px 0 0;
 display:flex;
 flex-direction:column;
 gap:12px;
@@ -122,8 +144,9 @@ gap:20px;
 
 .card{
 background:#1e1e1e;
-padding:25px;
-border-radius:10px;
+padding:30px;
+border-radius:12px;
+border:1px solid #333;
 }
 
 .card h3{
@@ -134,6 +157,10 @@ margin-bottom:10px;
 .contact{
 text-align:center;
 background:black;
+}
+
+.contact a{
+color:#FFD700;
 }
 
 footer{
@@ -149,12 +176,27 @@ flex-direction:column;
 gap:15px;
 }
 
+nav{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+text-align:center;
+justify-content:center;
+padding:60px 6%;
+}
+
 .hero-content h1{
-font-size:40px;
+font-size:42px;
 }
 
 .hero-content p{
 font-size:18px;
+}
+
+.booking-form{
+margin:25px auto 0;
 }
 }
 </style>
@@ -180,21 +222,21 @@ font-size:18px;
 <section class="hero">
 <div class="hero-content">
 
-<h1>Bethlehem Taxi Göteborg</h1>
+<h1>Bethlehem Taxi<br>Göteborg</h1>
 
 <p>Snabb, trygg och pålitlig taxi dygnet runt.</p>
 
 <a class="btn" href="tel:0760318143">📞 Ring nu</a>
 
-<button class="btn" onclick="toggleBooking()">🚕 Boka resa</button>
+<button class="btn btn-dark" onclick="toggleBooking()">🚕 Boka resa</button>
 
 <div id="booking-options" style="display:none; margin-top:20px;">
 
-<a class="btn" href="https://wa.me/46760318143?text=Hej,%20jag%20vill%20boka%20en%20taxiresa">💬 WhatsApp</a>
+<a class="btn btn-dark" href="https://wa.me/46760318143?text=Hej,%20jag%20vill%20boka%20en%20taxiresa">💬 WhatsApp</a>
 
-<a class="btn" href="sms:0760318143?body=Hej,%20jag%20vill%20boka%20en%20taxiresa">📱 SMS</a>
+<a class="btn btn-dark" href="sms:0760318143?body=Hej,%20jag%20vill%20boka%20en%20taxiresa">📱 SMS</a>
 
-<a class="btn" href="mailto:ibrahim.k.habet86@gmail.com?subject=Taxibokning">📧 E-post</a>
+<a class="btn btn-dark" href="mailto:ibrahim.k.habet86@gmail.com?subject=Taxibokning">📧 E-post</a>
 
 <div class="booking-form">
 <h3>Boka via e-post</h3>
@@ -265,7 +307,7 @@ font-size:18px;
 <h2>Kontakta oss</h2>
 
 <p>📞 Telefon: +46 76 031 81 43</p>
-<p>📧 E-post: <a style="color:#FFD700;" href="mailto:ibrahim.k.habet86@gmail.com">ibrahim.k.habet86@gmail.com</a></p>
+<p>📧 E-post: <a href="mailto:ibrahim.k.habet86@gmail.com">ibrahim.k.habet86@gmail.com</a></p>
 <p>📍 Göteborg, Sverige</p>
 
 <br>
@@ -280,12 +322,7 @@ font-size:18px;
 <script>
 function toggleBooking() {
   var x = document.getElementById("booking-options");
-
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+  x.style.display = x.style.display === "none" ? "block" : "none";
 }
 
 function sendBookingEmail() {
@@ -304,7 +341,6 @@ function sendBookingEmail() {
     "Tid: " + time + "\n" +
     "Från: " + from + "\n" +
     "Till: " + to;
-    //"Flygnummer:" + + "\n" + 
 
   window.location.href =
     "mailto:ibrahim.k.habet86@gmail.com?subject=" +
