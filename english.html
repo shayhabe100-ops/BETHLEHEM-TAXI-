@@ -41,13 +41,24 @@ margin-left:20px;
 font-weight:bold;
 }
 
+.language-select{
+background:#FFD700;
+color:black;
+font-weight:bold;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+margin-left:20px;
+cursor:pointer;
+}
+
 .hero{
-height:90vh;
+min-height:90vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+padding:40px 20px;
 background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
 }
 
@@ -73,6 +84,21 @@ border-radius:8px;
 margin:10px;
 border:none;
 cursor:pointer;
+font-size:16px;
+}
+
+.booking-form{
+max-width:500px;
+margin:30px auto 0;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.booking-form input{
+padding:14px;
+border-radius:8px;
+border:none;
 font-size:16px;
 }
 
@@ -143,8 +169,10 @@ font-size:18px;
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
 
-<a href="index.html">🇸🇪 Swedish</a>
-<a href="english.html">🇬🇧 English</a>
+<select onchange="location = this.value;" class="language-select">
+<option value="english.html">🇬🇧 English</option>
+<option value="index.html">🇸🇪 Svenska</option>
+</select>
 </nav>
 </header>
 
@@ -160,11 +188,26 @@ font-size:18px;
 <button class="btn" onclick="toggleBooking()">🚕 Book Ride</button>
 
 <div id="booking-options" style="display:none; margin-top:20px;">
+
 <a class="btn" href="https://wa.me/46760318143?text=Hello,%20I%20would%20like%20to%20book%20a%20taxi">💬 WhatsApp</a>
 
 <a class="btn" href="sms:0760318143?body=Hello,%20I%20would%20like%20to%20book%20a%20taxi">📱 SMS</a>
 
 <a class="btn" href="mailto:ibrahim.k.habet86@gmail.com?subject=Taxi Booking">📧 Email</a>
+
+<div class="booking-form">
+<h3>Book by Email</h3>
+
+<input type="text" id="name" placeholder="Your name">
+<input type="tel" id="phone" placeholder="Phone number">
+<input type="date" id="date">
+<input type="time" id="time">
+<input type="text" id="from" placeholder="Pickup address">
+<input type="text" id="to" placeholder="Destination">
+
+<button class="btn" onclick="sendBookingEmail()">Send Booking</button>
+</div>
+
 </div>
 
 </div>
@@ -231,7 +274,7 @@ font-size:18px;
 
 <p>📞 Phone: +46 76 031 81 43</p>
 
-<p>📧 Email: ibrahim.k.habet86@gmail.com</p>
+<p>📧 Email: <a style="color:#FFD700;" href="mailto:ibrahim.k.habet86@gmail.com">ibrahim.k.habet86@gmail.com</a></p>
 
 <p>📍 Gothenburg, Sweden</p>
 
@@ -256,6 +299,30 @@ function toggleBooking() {
   } else {
     x.style.display = "none";
   }
+}
+
+function sendBookingEmail() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  var from = document.getElementById("from").value;
+  var to = document.getElementById("to").value;
+
+  var subject = "Taxi Booking";
+  var body =
+    "Name: " + name + "\n" +
+    "Phone: " + phone + "\n" +
+    "Date: " + date + "\n" +
+    "Time: " + time + "\n" +
+    "Pickup address: " + from + "\n" +
+    "Destination: " + to;
+
+  window.location.href =
+    "mailto:ibrahim.k.habet86@gmail.com?subject=" +
+    encodeURIComponent(subject) +
+    "&body=" +
+    encodeURIComponent(body);
 }
 </script>
 
