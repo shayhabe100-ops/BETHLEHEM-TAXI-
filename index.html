@@ -72,6 +72,9 @@ text-decoration:none;
 font-weight:bold;
 border-radius:8px;
 margin:10px;
+border:none;
+cursor:pointer;
+font-size:16px;
 }
 
 section{
@@ -115,7 +118,6 @@ border-top:2px solid #FFD700;
 }
 
 @media(max-width:768px){
-
 header{
 flex-direction:column;
 gap:15px;
@@ -128,10 +130,8 @@ font-size:40px;
 .hero-content p{
 font-size:18px;
 }
-
 }
 </style>
-
 </head>
 
 <body>
@@ -147,7 +147,6 @@ font-size:18px;
 </header>
 
 <section class="hero">
-
 <div class="hero-content">
 
 <h1>Bethlehem Taxi Göteborg</h1>
@@ -160,21 +159,17 @@ font-size:18px;
 
 <div id="booking-options" style="display:none; margin-top:20px;">
 <a class="btn" href="https://wa.me/46760318143?text=Hej,%20jag%20vill%20boka%20en%20taxiresa">💬 WhatsApp</a>
-
 <a class="btn" href="sms:0760318143?body=Hej,%20jag%20vill%20boka%20en%20taxiresa">📱 SMS</a>
-
 <a class="btn" href="mailto:ibrahim.k.habet86@gmail.com?subject=Taxibokning">📧 E-post</a>
 </div>
-</div>
 
+</div>
 </section>
 
 <section id="tjanster">
-
 <h2>Våra Tjänster</h2>
 
 <div class="cards">
-
 <div class="card">
 <h3>✈️ Flygplatstransfer</h3>
 <p>Taxi till och från Landvetter flygplats.</p>
@@ -194,17 +189,13 @@ font-size:18px;
 <h3>🛣️ Långresor</h3>
 <p>Längre resor i hela Sverige.</p>
 </div>
-
 </div>
-
 </section>
 
 <section id="om">
-
 <h2>Varför välja oss?</h2>
 
 <div class="cards">
-
 <div class="card">
 <h3>✅ Öppet 24/7</h3>
 <p>Vi finns tillgängliga när du behöver oss.</p>
@@ -219,32 +210,36 @@ font-size:18px;
 <h3>✅ Trygga resor</h3>
 <p>Säkra och bekväma transporter för alla kunder.</p>
 </div>
-
 </div>
-
 </section>
 
 <section class="contact" id="kontakt">
-
 <h2>Kontakta oss</h2>
 
-<p>📞 Telefon: +46760318143</p>
-
+<p>📞 Telefon: +46 76 031 81 43</p>
 <p>📧 E-post: ibrahim.k.habet86@gmail.com</p>
-
 <p>📍 Göteborg, Sverige</p>
 
 <br>
 
 <a class="btn" href="tel:0760318143">Ring och boka</a>
-
 </section>
 
 <footer>
-
 <p>© 2026 Bethlehem Taxi Göteborg</p>
-
 </footer>
+
+<script>
+function toggleBooking() {
+  var x = document.getElementById("booking-options");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
