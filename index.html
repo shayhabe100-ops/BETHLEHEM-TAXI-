@@ -2,16 +2,242 @@
 <html lang="sv">
 <head>
 <meta charset="UTF-8">
-<title>Bethlehem Taxi</title>
-  <meta name="google-site-verification" content="yeBoWaqAuqQgVWlptV0iSi7s3gVzmOtZqvDHEi23xvg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="yeBoWaqAuqQgVWlptV0iSi7s3gVzmOtZqvDHEi23xvg" />
+
+<title>Bethlehem Taxi Göteborg</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+background:black;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:3px solid #FFD700;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#FFD700;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7));
+}
+
+.hero-content h1{
+font-size:60px;
+color:#FFD700;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+background:#FFD700;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+margin:10px;
+}
+
+section{
+padding:80px 8%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#FFD700;
+font-size:36px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1e1e1e;
+padding:25px;
+border-radius:10px;
+}
+
+.card h3{
+color:#FFD700;
+margin-bottom:10px;
+}
+
+.contact{
+text-align:center;
+background:black;
+}
+
+footer{
+background:#000;
+text-align:center;
+padding:20px;
+border-top:2px solid #FFD700;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.hero-content h1{
+font-size:40px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+}
+</style>
+
 </head>
+
 <body>
 
-<h1>Bethlehem Taxi</h1>
+<header>
+<div class="logo">🚕 Bethlehem Taxi</div>
 
-<p>Taxi i Göteborg – öppet dygnet runt.</p>
+<nav>
+<a href="#tjanster">Tjänster</a>
+<a href="#om">Om oss</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+</header>
 
-<p>Ring oss för bokning.</p>
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Bethlehem Taxi Göteborg</h1>
+
+<p>Snabb, trygg och pålitlig taxi dygnet runt.</p>
+
+<a class="btn" href="tel:0700000000">📞 Ring nu</a>
+
+<a class="btn" href="#kontakt">🚕 Boka resa</a>
+
+</div>
+
+</section>
+
+<section id="tjanster">
+
+<h2>Våra Tjänster</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>✈️ Flygplatstransfer</h3>
+<p>Taxi till och från Landvetter flygplats.</p>
+</div>
+
+<div class="card">
+<h3>🏢 Företagsresor</h3>
+<p>Bekväma och punktliga företagsresor.</p>
+</div>
+
+<div class="card">
+<h3>🚕 Privatresor</h3>
+<p>Resor inom Göteborg och närliggande områden.</p>
+</div>
+
+<div class="card">
+<h3>🛣️ Långresor</h3>
+<p>Längre resor i hela Sverige.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="om">
+
+<h2>Varför välja oss?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>✅ Öppet 24/7</h3>
+<p>Vi finns tillgängliga när du behöver oss.</p>
+</div>
+
+<div class="card">
+<h3>✅ Punktliga</h3>
+<p>Vi kommer i tid och ger professionell service.</p>
+</div>
+
+<div class="card">
+<h3>✅ Trygga resor</h3>
+<p>Säkra och bekväma transporter för alla kunder.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="kontakt">
+
+<h2>Kontakta oss</h2>
+
+<p>📞 Telefon: 070-000 00 00</p>
+
+<p>📧 E-post: info@bethlehemtaxi.se</p>
+
+<p>📍 Göteborg, Sverige</p>
+
+<br>
+
+<a class="btn" href="tel:0700000000">Ring och boka</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Bethlehem Taxi Göteborg</p>
+
+</footer>
 
 </body>
 </html>
